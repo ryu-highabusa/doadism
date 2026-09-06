@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "sets": {
+    "doa": {
+      "description": "Dead or Alive, Model 2B, Jan. 10 1997 / probable revision C",
+      "maincpu": [
+        {"chip": "epr-19379c.15", "crc32": "5cc62fbe", "size": 524288, "offset": 0},
+        {"chip": "epr-19380c.16", "crc32": "58cfeaa9", "size": 524288, "offset": 2}
+      ]
+    },
+    "doab": {
+      "description": "Dead or Alive, Model 2B, Dec. 6 1996 / revision B",
+      "maincpu": [
+        {"chip": "epr-19379b.15", "crc32": "8a10a944", "size": 524288, "offset": 0},
+        {"chip": "epr-19380b.16", "crc32": "766c1ec8", "size": 524288, "offset": 2}
+      ]
+    },
+    "doaa": {
+      "description": "Dead or Alive, Model 2A, Dec. 4 1996 / revision A",
+      "maincpu": [
+        {"chip": "epr-19310a.12", "crc32": "06486f7a", "size": 524288, "offset": 0},
+        {"chip": "epr-19311a.13", "crc32": "1be62912", "size": 524288, "offset": 2}
+      ]
+    },
+    "doaab": {
+      "description": "Dead or Alive, Model 2A, Nov. 3 1996",
+      "maincpu": [
+        {"chip": "epr-19310.12", "crc32": "3c571e75", "size": 524288, "offset": 0},
+        {"chip": "epr-19311.13", "crc32": "8818363d", "size": 524288, "offset": 2}
+      ]
+    },
+    "doaae": {
+      "description": "Dead or Alive, Model 2A export revision",
+      "maincpu": [
+        {"chip": "epr-19383a.12", "crc32": "42e61481", "size": 524288, "offset": 0},
+        {"chip": "epr-19384a.13", "crc32": "034a3ab9", "size": 524288, "offset": 2}
+      ]
+    }
+  },
+  "shared_regions": {
+    "main_data": {
+      "size": 33554432,
+      "fill": 0,
+      "loads": [
+        {"chip": "mpr-19318", "crc32": "ab431bfe", "size": 4194304, "mode": "load32_word", "offset": 0},
+        {"chip": "mpr-19319", "crc32": "c5cb694d", "size": 4194304, "mode": "load32_word", "offset": 2},
+        {"chip": "mpr-19316", "crc32": "2d2d1b1a", "size": 4194304, "mode": "load32_word", "offset": 8388608},
+        {"chip": "mpr-19317", "crc32": "96b17bcf", "size": 4194304, "mode": "load32_word", "offset": 8388610},
+        {"chip": "mpr-19314", "crc32": "a8d963fb", "size": 4194304, "mode": "load32_word", "offset": 16777216},
+        {"chip": "mpr-19315", "crc32": "90ae5682", "size": 4194304, "mode": "load32_word", "offset": 16777218},
+        {"chip": "mpr-19312", "crc32": "1dcedb10", "size": 2097152, "mode": "load32_word", "offset": 25165824},
+        {"chip": "mpr-19313", "crc32": "8c63055e", "size": 2097152, "mode": "load32_word", "offset": 25165826}
+      ],
+      "copies": [
+        {"source": 25165824, "destination": 29360128, "length": 4194304}
+      ]
+    },
+    "polygons": {
+      "size": 33554432,
+      "fill": 255,
+      "loads": [
+        {"chip": "mpr-19322", "crc32": "d0e6ecf0", "size": 4194304, "mode": "load32_word", "offset": 0},
+        {"chip": "mpr-19325", "crc32": "7cbe432d", "size": 4194304, "mode": "load32_word", "offset": 2},
+        {"chip": "mpr-19323", "crc32": "453d3f4a", "size": 4194304, "mode": "load32_word", "offset": 8388608},
+        {"chip": "mpr-19326", "crc32": "b976da02", "size": 4194304, "mode": "load32_word", "offset": 8388610},
+        {"chip": "mpr-19324", "crc32": "0d6bf454", "size": 4194304, "mode": "load32_word", "offset": 16777216},
+        {"chip": "mpr-19327", "crc32": "6a75634c", "size": 4194304, "mode": "load32_word", "offset": 16777218}
+      ],
+      "copies": []
+    },
+    "textures": {
+      "size": 8388608,
+      "fill": 0,
+      "loads": [
+        {"chip": "mpr-19321", "crc32": "9c49e845", "size": 4194304, "mode": "load32_word", "offset": 0},
+        {"chip": "mpr-19320", "crc32": "190c017f", "size": 4194304, "mode": "load32_word", "offset": 2}
+      ],
+      "copies": []
+    },
+    "audiocpu": {
+      "size": 524288,
+      "fill": 0,
+      "loads": [
+        {"chip": "epr-19328", "crc32": "400bdbfb", "size": 524288, "mode": "load16_word_swap", "offset": 0}
+      ],
+      "copies": []
+    },
+    "samples": {
+      "size": 8388608,
+      "fill": 0,
+      "loads": [
+        {"chip": "mpr-19329", "crc32": "8fd2708a", "size": 2097152, "mode": "load16_word_swap", "offset": 0},
+        {"chip": "mpr-19330", "crc32": "0c69787d", "size": 2097152, "mode": "load16_word_swap", "offset": 2097152},
+        {"chip": "mpr-19331", "crc32": "c18ea0b8", "size": 2097152, "mode": "load16_word_swap", "offset": 4194304},
+        {"chip": "mpr-19332", "crc32": "2877f96f", "size": 2097152, "mode": "load16_word_swap", "offset": 6291456}
+      ],
+      "copies": []
+    }
+  }
+}
