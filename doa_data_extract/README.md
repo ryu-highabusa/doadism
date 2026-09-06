@@ -136,23 +136,3 @@ and DOA adds several requirements:
 region load recipe. It is separate from the Python so future dumps or corrected
 MAME definitions can be added without rewriting the extraction engine.
 
-## Note on `FUN_0002f280`
-
-The supplied decompile's `uVar4 % uVar4` is a register-recovery artifact, not
-credible source logic. The incoming argument and `FUN_0008e6f0`'s return both
-occupy `g0` at different times, and the decompiler has merged them. The call
-sites use the result as a bounded random delay and also call it with
-`(upper - lower) + 1` before adding `lower`. The strongest current static
-interpretation is therefore:
-
-```c
-/* exclusive_limit is expected to be nonzero */
-uint8_t random_u8_below(uint32_t exclusive_limit)
-{
-    return (uint8_t)(rng_next() % exclusive_limit);
-}
-```
-
-This naming is intentionally marked as an interpretation until the individual
-i960 instructions or a runtime sample confirm which register preserves the
-argument across the RNG call. It is not required by the extractor itself.
